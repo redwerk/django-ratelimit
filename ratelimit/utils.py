@@ -25,7 +25,7 @@ EXPIRATION_FUDGE = 5
 
 
 def user_or_ip(request):
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         return str(request.user.pk)
     return request.META['REMOTE_ADDR']
 
